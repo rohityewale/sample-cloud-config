@@ -1,0 +1,12 @@
+server:
+  port: 8761
+
+#Eureka details
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaulZone: http://sampleeurekaregistry:8761/eureka/

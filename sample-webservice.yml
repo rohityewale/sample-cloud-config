@@ -1,0 +1,23 @@
+server:
+  port: 9099
+  contextPath: /sample-service
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://sampleeurekaregistry:8761/eureka/
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      database: demo-db
+      port: 27017
+
+jwt:
+  clientId: web-client
+  client-secret: web123
+  accessTokenValiditySeconds: 300
+  refreshTokenValiditySeconds: 43200
