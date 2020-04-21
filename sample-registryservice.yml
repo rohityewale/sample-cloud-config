@@ -9,4 +9,4 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaulZone: http://sampleeurekaregistry:8761/eureka/
+      defaulZone: http://localhost:8761/eureka/
