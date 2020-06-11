@@ -1,12 +1,11 @@
 spring:
   application:
     name: online-service
-  data:
-    mongodb:
-      host: localhost
-      database: online-db
-      port: 27017
-
+  #data:
+  #  mongodb:
+   #   host: localhost
+   #   database: online-db
+   #   port: 27017
 server:
   port: 8081
   servlet:
