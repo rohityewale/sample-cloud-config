@@ -18,8 +18,9 @@ hystrix:
   command:
     online-service:
       execution:
-        thread:
-          timeoutInMilliseconds: 60000
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
 
 
 eureka:
