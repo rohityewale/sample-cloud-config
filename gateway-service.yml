@@ -4,3 +4,35 @@ spring:
 
 server:
   port: 8082
+
+zuul:
+  ignoredServices: '*'
+  ignoredPatterns:
+  routes:
+    online-service:
+      path: /online-service/**
+      stripPrefix: false
+      serviceId: online-service
+      sensitiveHeaders:
+
+hystrix:
+  command:
+    online-service:
+      exceution:
+        isolation:
+          thread:
+            timeOutInMilliseconds: 60000
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    region: default
+    registryFetchIntervalInSeconds: 5
+  instance:
+    preferIpAddress: true
