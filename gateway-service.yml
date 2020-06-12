@@ -5,6 +5,23 @@ spring:
 server:
   port: 8082
 
+zuul:
+  routes:
+    online-service:
+      path: /online-service/**
+      serviceId: online-service
+      stripPrefix: false
+      sensitive-header:
+
+
+hystrix:
+  command:
+    online-service:
+      execution:
+        thread:
+          timeoutInMilliseconds: 60000
+
+
 eureka:
   client:
     serviceUrl:
