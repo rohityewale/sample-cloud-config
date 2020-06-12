@@ -6,15 +6,10 @@ server:
   port: 8082
 
 zuul:
-  ignoredServices: '*'
-  ignoredPatterns:
   routes:
     online-service:
       path: /online-service/**
       url: http://localhost:8081
-      stripPrefix: false
-      serviceId: online-service
-      sensitive-headers:
 
 hystrix:
   command:
