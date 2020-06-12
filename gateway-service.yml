@@ -6,6 +6,7 @@ server:
   port: 8082
 
 zuul:
+  ignoredServices: '*'
   routes:
     online-service:
       path: /online-service/**
