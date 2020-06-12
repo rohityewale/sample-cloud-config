@@ -11,7 +11,7 @@ zuul:
       path: /online-service/**
       serviceId: online-service
       stripPrefix: false
-      sensitive-header:
+      sensitive-headers:
 
 
 hystrix:
