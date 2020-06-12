@@ -11,6 +11,7 @@ zuul:
   routes:
     online-service:
       path: /online-service/**
+      url: http://localhost:8081
       stripPrefix: false
       serviceId: online-service
       sensitive-headers:
