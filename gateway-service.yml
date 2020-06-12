@@ -13,12 +13,12 @@ zuul:
       path: /online-service/**
       stripPrefix: false
       serviceId: online-service
-      sensitiveHeaders:
+      sensitive-headers:
 
 hystrix:
   command:
     online-service:
-      exceution:
+      execution:
         isolation:
           thread:
             timeOutInMilliseconds: 60000
