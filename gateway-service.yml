@@ -8,8 +8,11 @@ server:
 zuul:
   routes:
     online-service:
-      path: /online-service1/**
+      path: /online-service/**
       url: http://localhost:8081
+    authorization-service:
+      path: /authorization-service/**
+      url: http://localhost:8083
 
 hystrix:
   command:
